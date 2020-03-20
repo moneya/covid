@@ -9,9 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "bensampo/laravel-enum": "^1.35",
+        "caffeinated/modules": "^6.1",
+        "caffeinated/themes": "^7.0",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "inertiajs/inertia-laravel": "^0.2.5",
         "laravel/framework": "^6.2",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "spatie/laravel-permission": "^3.11",
+        "tightenco/ziggy": "^0.9.0",
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
