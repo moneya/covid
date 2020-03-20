@@ -1,0 +1,16 @@
+{
+    "name": "dennis/scrud",
+    "description": "backend generator for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis O",
+            "email": "dennisohere@live.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": ["functions.php"]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "vendor/pages",
+    "description": "Pages theme.",
+    "type": "caffeinated-theme",
+    "autoload": {
+        "psr-4": {
+            "Themes\\Pages\\": "src/"
+        }
+    },
+    "require": {
+        "caffeinated/composer": "*"
+    }
+}
