@@ -27,45 +27,6 @@ window.System = Object.assign(window.System || {}, {
 
         return formData;
     },
-    paymentGateway : {
-        payWithRave({customerEmail, amount, ref, customerPhone, currency = "NGN", meta = [], paymentCallback}){
-            const API_publicKey = "FLWPUBK_TEST-811166c54dcab987acc9b6e0367c3592-X";
-
-            if(!customerEmail) {
-                window.System.toast('No email provided', 'warning');
-                return;
-            }
-
-            function RavePay(){
-                var autoReloadOnClose = true;
-
-                var x = getpaidSetup({
-                    PBFPubKey: API_publicKey,
-                    customer_email: customerEmail,
-                    amount: amount,
-                    customer_phone: customerPhone,
-                    currency: currency,
-                    txref: ref,
-                    meta: meta,
-                    onclose: function() {
-                        if(autoReloadOnClose){
-                            window.System.activityAlert('please wait...');
-                            window.location.href = window.location.pathname;
-                        }
-                    },
-                    callback: function(response) {
-                        autoReloadOnClose = false;
-                        x.close();// use this to close the modal immediately after payment.
-
-                        paymentCallback(response);
-                    }
-                });
-                console.log('rave', x);
-            }
-
-            return new RavePay();
-        }
-    }
 });
 
 (function(){
@@ -204,6 +165,7 @@ window.$script.ready('core', function(){
         window.location.origin + '/themes/pages/assets/plugins/classie/classie.js',
         window.location.origin + '/themes/pages/assets/plugins/switchery/js/switchery.min.js',
         window.location.origin + '/themes/pages/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js',
+        window.location.origin + '/themes/pages/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
     ], 'core2');
 });
 
@@ -211,7 +173,6 @@ window.$script.ready(['core', 'core2'], function() {
     window.$script([
         window.location.origin + '/themes/pages/pages/js/pages.js',
         window.location.origin + '/themes/pages/assets/js/scripts.js',
-        window.location.origin + '/themes/pages/vendors/flwpbf-inline.js',
         window.location.origin + '/themes/pages/js/app.js',
     ], 'app');
 });

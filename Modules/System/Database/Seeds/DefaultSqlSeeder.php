@@ -17,9 +17,9 @@ class DefaultSqlSeeder extends Seeder
     {
 
 //        // States
-//        $states = __DIR__ . '/../sql/states.sql';
-//        DB::unprepared(file_get_contents($states));
-//        $this->command->info('States table seeded.');
+        $states = __DIR__ . '/../sql/states.sql';
+        DB::unprepared(file_get_contents($states));
+        $this->command->info('States table seeded.');
 
 
 
@@ -27,7 +27,7 @@ class DefaultSqlSeeder extends Seeder
 //        $wards = __DIR__ . '/../sql/wards.sql';// database_path('sql/');
 //        DB::unprepared(file_get_contents($wards));
 //        $this->command->info('Ward table seeded.');
-        $this->seedWards();
+//        $this->seedWards();
     }
 
     private function seedWards()

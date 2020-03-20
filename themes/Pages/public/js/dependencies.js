@@ -19310,53 +19310,6 @@ window.System = Object.assign(window.System || {}, {
     }
 
     return formData;
-  },
-  paymentGateway: {
-    payWithRave: function payWithRave(_ref) {
-      var customerEmail = _ref.customerEmail,
-          amount = _ref.amount,
-          ref = _ref.ref,
-          customerPhone = _ref.customerPhone,
-          _ref$currency = _ref.currency,
-          currency = _ref$currency === void 0 ? "NGN" : _ref$currency,
-          _ref$meta = _ref.meta,
-          meta = _ref$meta === void 0 ? [] : _ref$meta,
-          paymentCallback = _ref.paymentCallback;
-      var API_publicKey = "FLWPUBK_TEST-811166c54dcab987acc9b6e0367c3592-X";
-
-      if (!customerEmail) {
-        window.System.toast('No email provided', 'warning');
-        return;
-      }
-
-      function RavePay() {
-        var autoReloadOnClose = true;
-        var x = getpaidSetup({
-          PBFPubKey: API_publicKey,
-          customer_email: customerEmail,
-          amount: amount,
-          customer_phone: customerPhone,
-          currency: currency,
-          txref: ref,
-          meta: meta,
-          onclose: function onclose() {
-            if (autoReloadOnClose) {
-              window.System.activityAlert('please wait...');
-              window.location.href = window.location.pathname;
-            }
-          },
-          callback: function callback(response) {
-            autoReloadOnClose = false;
-            x.close(); // use this to close the modal immediately after payment.
-
-            paymentCallback(response);
-          }
-        });
-        console.log('rave', x);
-      }
-
-      return new RavePay();
-    }
   }
 });
 
@@ -19471,10 +19424,10 @@ window.System = Object.assign(window.System || {}, {
 
 window.$script([window.location.origin + '/themes/pages/vendors/xhook/xhook.min.js', window.location.origin + '/themes/pages/vendors/accounting/accounting.min.js', window.location.origin + '/themes/pages/assets/plugins/pace/pace.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery/jquery-3.2.1.min.js', window.location.origin + '/themes/pages/assets/plugins/modernizr.custom.js', window.location.origin + '/themes/pages/assets/plugins/jquery-ui/jquery-ui.min.js'], 'core');
 window.$script.ready('core', function () {
-  window.$script([window.location.origin + '/themes/pages/assets/plugins/popper/umd/popper.min.js', window.location.origin + '/themes/pages/assets/plugins/bootstrap/js/bootstrap.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery/jquery-easy.js', window.location.origin + '/themes/pages/assets/plugins/jquery-unveil/jquery.unveil.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-ios-list/jquery.ioslist.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-actual/jquery.actual.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js', window.location.origin + '/themes/pages/assets/plugins/summernote/js/summernote.min.js', window.location.origin + '/themes/pages/assets/plugins/select2/js/select2.full.min.js', window.location.origin + '/themes/pages/assets/plugins/classie/classie.js', window.location.origin + '/themes/pages/assets/plugins/switchery/js/switchery.min.js', window.location.origin + '/themes/pages/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js'], 'core2');
+  window.$script([window.location.origin + '/themes/pages/assets/plugins/popper/umd/popper.min.js', window.location.origin + '/themes/pages/assets/plugins/bootstrap/js/bootstrap.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery/jquery-easy.js', window.location.origin + '/themes/pages/assets/plugins/jquery-unveil/jquery.unveil.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-ios-list/jquery.ioslist.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-actual/jquery.actual.min.js', window.location.origin + '/themes/pages/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js', window.location.origin + '/themes/pages/assets/plugins/summernote/js/summernote.min.js', window.location.origin + '/themes/pages/assets/plugins/select2/js/select2.full.min.js', window.location.origin + '/themes/pages/assets/plugins/classie/classie.js', window.location.origin + '/themes/pages/assets/plugins/switchery/js/switchery.min.js', window.location.origin + '/themes/pages/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js', window.location.origin + '/themes/pages/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js'], 'core2');
 });
 window.$script.ready(['core', 'core2'], function () {
-  window.$script([window.location.origin + '/themes/pages/pages/js/pages.js', window.location.origin + '/themes/pages/assets/js/scripts.js', window.location.origin + '/themes/pages/vendors/flwpbf-inline.js', window.location.origin + '/themes/pages/js/app.js'], 'app');
+  window.$script([window.location.origin + '/themes/pages/pages/js/pages.js', window.location.origin + '/themes/pages/assets/js/scripts.js', window.location.origin + '/themes/pages/js/app.js'], 'app');
 });
 
 /***/ }),

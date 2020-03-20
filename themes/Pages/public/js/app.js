@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f117bef809441babf8da","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"02317887c3f9ab203ee1","6":"afc5379ebd708ea1eab5","7":"c7bc19904e37558f3bec","8":"931648e585f658cc681f","9":"cf501dd96110f98e2341","10":"39df75202477b042be04"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"a89cff55e09fb25085bd","1":"324cb82da5a0a4015152","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"02317887c3f9ab203ee1","6":"afc5379ebd708ea1eab5","7":"c7bc19904e37558f3bec","8":"931648e585f658cc681f","9":"cf501dd96110f98e2341","10":"39df75202477b042be04","12":"d1a62a578b791ad5d995"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13509,6 +13509,26 @@ var map = {
 		0,
 		3
 	],
+	"./situationReport/Create": [
+		"./resources/js/Pages/situationReport/Create.vue",
+		0,
+		1
+	],
+	"./situationReport/Create.vue": [
+		"./resources/js/Pages/situationReport/Create.vue",
+		0,
+		1
+	],
+	"./situationReport/Index": [
+		"./resources/js/Pages/situationReport/Index.vue",
+		0,
+		12
+	],
+	"./situationReport/Index.vue": [
+		"./resources/js/Pages/situationReport/Index.vue",
+		0,
+		12
+	],
 	"./users/Index": [
 		"./resources/js/Pages/users/Index.vue",
 		8,
@@ -13682,53 +13702,6 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('summernote', {
         }
       });
     }, 500);
-  }
-});
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('payWithRave', {
-  bind: function bind(el, binding, vnode) {
-    window.$script.ready('app', function () {
-      // const API_publicKey = "FLWPUBK_TEST-811166c54dcab987acc9b6e0367c3592-X";
-      //
-      // function payWithRave() {
-      //
-      //     var autoReloadOnClose = true;
-      //
-      //     var x = getpaidSetup({
-      //         PBFPubKey: API_publicKey,
-      //         customer_email: binding.value.customerEmail,
-      //         amount: binding.value.amount,
-      //         customer_phone: binding.value.customerPhone,
-      //         currency: binding.value.currency || "NGN",
-      //         txref: binding.value.ref,
-      //         meta: binding.value.meta,
-      //         onclose: function() {
-      //             if(autoReloadOnClose){
-      //                 window.System.activityAlert('please wait...');
-      //                 window.location.href = window.location.pathname;
-      //             }
-      //         },
-      //         callback: function(response) {
-      //             autoReloadOnClose = false;
-      //             x.close();// use this to close the modal immediately after payment.
-      //
-      //             binding.value.callback(response);
-      //
-      //         }
-      //     });
-      //     console.log('rave', x);
-      // }
-      $(el).click(function () {
-        window.System.paymentGateway.payWithRave({
-          customerEmail: binding.value.customerEmail,
-          currency: binding.value.currency || "NGN",
-          meta: binding.value.meta,
-          amount: binding.value.amount,
-          customerPhone: binding.value.customerPhone,
-          ref: binding.value.ref,
-          paymentCallback: binding.value.callback
-        }); // new payWithRave();
-      });
-    });
   }
 });
 

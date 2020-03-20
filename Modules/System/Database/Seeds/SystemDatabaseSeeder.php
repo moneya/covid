@@ -13,7 +13,7 @@ class SystemDatabaseSeeder extends Seeder
      */
     public function run()
     {
-//        $this->call(DefaultSqlSeeder::class);
+        $this->call(DefaultSqlSeeder::class);
         $this->call(SystemConfigurationTableSeeder::class);
     }
 }

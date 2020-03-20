@@ -24,6 +24,13 @@
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="pg-home"></i></span>
                 </li>
+
+                <li class="">
+                    <inertia-link :href="$route('app.console.situation-reports.index')">
+                        <span class="title">Situation Reports</span>
+                    </inertia-link>
+                    <span class="icon-thumbnail"><i class="fa fa-medkit"></i></span>
+                </li>
             </ul>
             <div class="clearfix"></div>
         </div>

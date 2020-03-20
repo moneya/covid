@@ -23,6 +23,7 @@
     <link href="/themes/pages/assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="/themes/pages/pages/css/pages-icons.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="/themes/pages/assets/plugins/bootstrap-tag/bootstrap-tagsinput.css">
+    <link media="screen" type="text/css" rel="stylesheet" href="/themes/pages/assets/plugins/bootstrap-datepicker/css/datepicker3.css">
     <link media="screen" type="text/css" rel="stylesheet" href="/themes/pages/assets/plugins/summernote/css/summernote.css">
     <link class="main-stylesheet" href="/themes/pages/pages/css/themes/corporate.css" rel="stylesheet" type="text/css" />
 
