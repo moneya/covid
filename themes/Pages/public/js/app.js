@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"75e744ce24644704399d","1":"23fd17a91328d3730e9d","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"d5764edaf96e41e4e028","6":"a6d0934c0df6c23a7750","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"67b6fd80d63808c7dfc1","10":"423732c1dacfa63b6922","11":"0396c0a487d5f41e3ebd","13":"20950135759c2e4ad827","14":"c7d829bc87f327ebe21f"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ef9dd3c4da3a04a955e0","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"8cdf8adb7faeb0a1e0c3","6":"0edc493cec33659f16b3","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"56b818d4d76d855989f2","10":"c9093757ba2b4af9fdc9","11":"a688ce762b2d1090acd5","13":"4347f0f02d04b73ad6d8","14":"7a6c2c7bcb0ca6361b81","15":"2deee4541e4be45e0321","16":"57b45c300425411ae57d"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13484,6 +13484,20 @@ var map = {
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
 		8
+	],
+	"./networkData/CaseMap": [
+		"./resources/js/Pages/networkData/CaseMap.vue",
+		1,
+		16,
+		0,
+		15
+	],
+	"./networkData/CaseMap.vue": [
+		"./resources/js/Pages/networkData/CaseMap.vue",
+		1,
+		16,
+		0,
+		15
 	],
 	"./networkData/Create": [
 		"./resources/js/Pages/networkData/Create.vue",

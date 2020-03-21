@@ -19417,7 +19417,12 @@ window.System = Object.assign(window.System || {}, {
   });
   window.System = Object.assign(window.System, {
     closePageLoader: function closePageLoader() {
-      loading.close();
+      if (loading !== undefined) {
+        loading.close();
+      } else {
+        // window.System.activityAlert('Rebooting page. Please wait...');
+        window.location.reload();
+      }
     }
   });
 })();

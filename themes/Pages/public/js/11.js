@@ -1,5 +1,221 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
+/***/ "./node_modules/@inertiajs/inertia-vue/src/app.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@inertiajs/inertia-vue/src/app.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./link */ "./node_modules/@inertiajs/inertia-vue/src/link.js");
+/* harmony import */ var _remember__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./remember */ "./node_modules/@inertiajs/inertia-vue/src/remember.js");
+
+
+
+
+let app = {}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Inertia',
+  props: {
+    initialPage: {
+      type: Object,
+      required: true,
+    },
+    resolveComponent: {
+      type: Function,
+      required: true,
+    },
+    transformProps: {
+      type: Function,
+      default: props => props,
+    },
+  },
+  data() {
+    return {
+      component: null,
+      props: {},
+      key: null,
+    }
+  },
+  created() {
+    app = this
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].init({
+      initialPage: this.initialPage,
+      resolveComponent: this.resolveComponent,
+      updatePage: (component, props, { preserveState }) => {
+        this.component = component
+        this.props = this.transformProps(props)
+        this.key = preserveState ? this.key : Date.now()
+      },
+    })
+  },
+  render(h) {
+    if (this.component) {
+      if (this.component.layout) {
+        const child = h(this.component, {
+          key: this.key,
+          props: this.props,
+        })
+
+        if (typeof this.component.layout === 'function') {
+          return this.component.layout(h, child)
+        } else {
+          return h(this.component.layout, [child])
+        }
+      } else {
+        return h(this.component, {
+          key: this.key,
+          props: this.props,
+        })
+      }
+    }
+  },
+  install(Vue) {
+    Object.defineProperty(Vue.prototype, '$inertia', { get: () => _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"] })
+    Object.defineProperty(Vue.prototype, '$page', { get: () => app.props })
+    Vue.mixin(_remember__WEBPACK_IMPORTED_MODULE_2__["default"])
+    Vue.component('InertiaLink', _link__WEBPACK_IMPORTED_MODULE_1__["default"])
+  },
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@inertiajs/inertia-vue/src/link.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@inertiajs/inertia-vue/src/link.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  functional: true,
+  props: {
+    data: {
+      type: Object,
+      default: () => ({}),
+    },
+    href: {
+      type: String,
+      required: true,
+    },
+    method: {
+      type: String,
+      default: 'get',
+    },
+    replace: {
+      type: Boolean,
+      default: false,
+    },
+    preserveScroll: {
+      type: Boolean,
+      default: false,
+    },
+    preserveState: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  render(h, { props, data, children }) {
+    return h('a', {
+      ...data,
+      attrs: {
+        ...data.attrs,
+        href: props.href,
+      },
+      on: {
+        ...(data.on || {}),
+        click: event => {
+          if (data.on && data.on.click) {
+            data.on.click(event)
+          }
+
+          if (Object(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["shouldIntercept"])(event)) {
+            event.preventDefault()
+
+            _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].visit(props.href, {
+              data: props.data,
+              method: props.method,
+              replace: props.replace,
+              preserveScroll: props.preserveScroll,
+              preserveState: props.preserveState,
+            })
+          }
+        },
+      },
+    }, children)
+  },
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@inertiajs/inertia-vue/src/remember.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@inertiajs/inertia-vue/src/remember.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  created() {
+    if (!this.$options.remember) {
+      return
+    }
+
+    if (Array.isArray(this.$options.remember)) {
+      this.$options.remember = { data: this.$options.remember }
+    }
+
+    if (typeof this.$options.remember === 'string') {
+      this.$options.remember = { data: [this.$options.remember] }
+    }
+
+    if (typeof this.$options.remember.data === 'string') {
+      this.$options.remember = { data: [this.$options.remember.data] }
+    }
+
+    const stateKey = this.$options.remember.key instanceof Function
+      ? this.$options.remember.key()
+      : this.$options.remember.key
+
+    const restored = _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].restore(stateKey)
+
+    this.$options.remember.data.forEach(key => {
+      if (restored !== undefined && restored[key] !== undefined) {
+        this[key] = restored[key]
+      }
+
+      this.$watch(key, () => {
+        _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__["Inertia"].remember(
+          this.$options.remember.data.reduce((data, key) => ({ ...data, [key]: this[key] }), {}),
+          stateKey
+        )
+      }, { immediate: true, deep: true })
+    })
+  },
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/users/customers/NewCustomer.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/users/customers/NewCustomer.vue?vue&type=script&lang=js& ***!

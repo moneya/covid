@@ -1,14 +1,14 @@
 <template>
     <div>
-        <SideBar></SideBar>
+        <SideBar v-if="showSidebar"></SideBar>
 
         <!-- START PAGE-CONTAINER -->
         <div class="page-container ">
-            <AppHeader></AppHeader>
+            <AppHeader v-if="showHeader"></AppHeader>
             <!-- START PAGE CONTENT WRAPPER -->
             <div class="page-content-wrapper ">
                 <!-- START PAGE CONTENT -->
-                <div class="content">
+                <div class="content" :style="{paddingLeft : !showSidebar ? '0' : 'null', paddingTop: !showHeader ? '0' : 'null'}">
                     <!-- START JUMBOTRON -->
                     <div class="jumbotron" data-pages="parallax">
                         <div class=" container-fluid container-fixed-lg sm-p-l-0 sm-p-r-0">
@@ -35,7 +35,7 @@
                     <!-- END CONTAINER FLUID -->
                 </div>
                 <!-- END PAGE CONTENT -->
-               <Footer></Footer>
+               <Footer v-if="showFooter" :style="{left : !showSidebar ? '0' : 'null'}"></Footer>
             </div>
             <!-- END PAGE CONTENT WRAPPER -->
         </div>
@@ -56,7 +56,15 @@
             SideBar
         },
         props: {
-
+            showHeader : {
+                default: true
+            },
+            showFooter: {
+                default: true
+            },
+            showSidebar: {
+                default: true
+            }
         },
         mounted(){
             $('body').addClass('menu-pin menu-behind');

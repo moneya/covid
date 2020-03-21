@@ -10,7 +10,7 @@ namespace Modules\Networkdata\ScrudActions;
 
 
 use Inertia\Inertia;
-use Modules\Networkdata\Repositories\ConfirmedCaseRepository;
+use Modules\Networkdata\Data\NetworkData;
 use Modules\Scrud\Kernel\ScrudAction;
 
 class NetworkMap extends ScrudAction
@@ -23,9 +23,11 @@ class NetworkMap extends ScrudAction
 
     public function getHandler()
     {
-        $cases = ConfirmedCaseRepository::init()->fetchJson();
+        $network = NetworkData::init()->getNetworkData();
 
-        return Inertia::render('networkData/Map');
+        return Inertia::render('networkData/CaseMap', [
+            'network' => $network
+        ]);
     }
 
 }

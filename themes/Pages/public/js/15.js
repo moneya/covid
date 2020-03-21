@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/networkData/CaseMap.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
@@ -10,6 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/App */ "./resources/js/Layouts/App.vue");
+/* harmony import */ var vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vis-network/dist/vis-network */ "./node_modules/vis-network/dist/vis-network.js");
+/* harmony import */ var vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -39,10 +41,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CaseMap",
   components: {
     App: _Layouts_App__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    network: Object
+  },
+  mounted: function mounted() {
+    var nodes = new vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1___default.a.DataSet(this.network.nodes); // create an array with edges
+
+    var edges = new vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1___default.a.DataSet(this.network.edges); // create a network
+
+    var container = document.getElementById('map');
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = {
+      physics: {
+        stabilization: false,
+        barnesHut: {
+          springLength: 200
+        }
+      },
+      layout: {
+        hierarchical: true
+      },
+      edges: {
+        arrows: 'to, middle',
+        color: 'red',
+        font: '12px arial #ff0000',
+        scaling: {
+          label: true
+        },
+        shadow: true,
+        smooth: true
+      },
+      nodes: {
+        shape: 'hexagon'
+      }
+    };
+    var network = new vis_network_dist_vis_network__WEBPACK_IMPORTED_MODULE_1___default.a.Network(container, data, options);
   }
 });
 
@@ -60,7 +102,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "div#map[data-v-12c3475c] {\n  height: 400px;\n}", ""]);
+exports.push([module.i, "div#map[data-v-12c3475c] {\n  height: 600px;\n}", ""]);
 
 // exports
 
