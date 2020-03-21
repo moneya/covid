@@ -1,0 +1,13 @@
+{
+    "name": "vendor/sitefront",
+    "description": "Sitefront theme.",
+    "type": "caffeinated-theme",
+    "autoload": {
+        "psr-4": {
+            "Themes\\Sitefront\\": "src/"
+        }
+    },
+    "require": {
+        "caffeinated/composer": "*"
+    }
+}

@@ -28,6 +28,8 @@ class SetTheme extends TaskProcessor
     {
         if (Str::startsWith(request()->getPathInfo(), '/app/console')) {
             Theme::set(config('backend_module.theme'));
+        } else {
+            Theme::set('sitefront');
         }
 
     }
