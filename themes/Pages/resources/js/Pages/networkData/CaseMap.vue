@@ -55,9 +55,9 @@
                         springLength: 200
                     }
                 },
-                layout:{
-                    hierarchical: true
-                },
+                // layout:{
+                //     hierarchical: true
+                // },
                 edges:{
                     arrows: 'to, middle',
                     color: 'red',

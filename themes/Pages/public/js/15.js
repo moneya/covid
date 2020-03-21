@@ -67,9 +67,9 @@ __webpack_require__.r(__webpack_exports__);
           springLength: 200
         }
       },
-      layout: {
-        hierarchical: true
-      },
+      // layout:{
+      //     hierarchical: true
+      // },
       edges: {
         arrows: 'to, middle',
         color: 'red',
