@@ -13,11 +13,11 @@ class SituationReportController extends Controller
 {
     public function index()
     {
-        $report = SituationReportRepository::init()->fetchLatestReport();
+        $reports = SituationReportRepository::init()->fetchLatestReport();
 
-//        dd($report);
-
-        return Inertia::render('situationReport/Index', []);
+        return Inertia::render('situationReport/Index', [
+            'reports' => $reports->map->transform()
+        ]);
     }
 
     public function create()

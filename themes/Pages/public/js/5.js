@@ -1,21 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Layouts_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Layouts/App */ "./resources/js/Layouts/App.vue");
-/* harmony import */ var _common_DataViewer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/DataViewer */ "./resources/js/common/DataViewer.vue");
-//
-//
-//
-//
-//
+/* harmony import */ var _Layouts_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/App */ "./resources/js/Layouts/App.vue");
+/* harmony import */ var _common_DataViewer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common/DataViewer */ "./resources/js/common/DataViewer.vue");
 //
 //
 //
@@ -94,23 +89,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Index",
-  data: function data() {
-    return {
-      forms: {
-        customer: {
-          id: null,
-          name: '',
-          published: false
-        }
-      }
-    };
-  },
   components: {
     DataViewer: _common_DataViewer__WEBPACK_IMPORTED_MODULE_1__["default"],
     App: _Layouts_App__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  props: ['customers'],
-  methods: {}
+  props: {
+    reports: Array
+  }
 });
 
 /***/ }),
@@ -162,10 +147,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238& ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -185,70 +170,64 @@ var render = function() {
           key: "page-header",
           fn: function() {
             return [
-              _c("div", { staticClass: "bg-dark m-b-30" }, [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "row p-b-60 p-t-60" }, [
-                    _c("div", { staticClass: "col-md-6 text-white p-b-30" }, [
-                      _c("div", { staticClass: "media" }, [
-                        _c(
-                          "div",
-                          { staticClass: "avatar avatar mr-3" },
-                          [
-                            _c(
-                              "InertiaLink",
-                              {
-                                staticClass: "btn btn-white-translucent",
-                                attrs: { href: "/backend" }
-                              },
-                              [_c("i", { staticClass: "mdi mdi-home " })]
-                            )
-                          ],
-                          1
-                        ),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "row d-flex justify-content-between align-items-center"
+                },
+                [
+                  _c("div", { staticClass: "col-lg-9" }, [
+                    _c("div", { staticClass: "card card-transparent" }, [
+                      _c("div", { staticClass: "card-header " }, [
+                        _c("div", { staticClass: "card-title" }, [
+                          _vm._v("Situation Report")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("h3", [
+                          _c("span", { staticClass: "bold" }, [
+                            _vm._v("COVID-19")
+                          ]),
+                          _vm._v(" - Situation Report")
+                        ]),
                         _vm._v(" "),
-                        _c("div", { staticClass: "media-body" }, [
-                          _c("h4", [_vm._v("Customers")]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "opacity-75" }, [
-                            _vm._v(
-                              "\n                                    showing " +
-                                _vm._s(_vm.customers.length) +
-                                "\n                                    Record(s)\n                                "
-                            )
-                          ])
+                        _c("p", [
+                          _vm._v(
+                            "\n                            Situation report Data sheet for COVID-19 to track / monitor epidemic rate\n                        "
+                          )
                         ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-6 text-white " }, [
-                      _c(
-                        "div",
-                        { staticClass: "text-md-right" },
-                        [
-                          _c(
-                            "inertia-link",
-                            {
-                              staticClass: "btn btn-outline-light",
-                              attrs: {
-                                href: _vm.$route(
-                                  "backend.scrud.users.newcustomerpage"
-                                )
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mdi mdi-plus" }),
-                              _vm._v(
-                                "\n                                Add Customer\n                            "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
                     ])
-                  ])
-                ])
-              ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-3" },
+                    [
+                      _c(
+                        "inertia-link",
+                        {
+                          staticClass: "btn btn-primary btn-block btn-lg",
+                          attrs: {
+                            href: _vm.$route(
+                              "app.console.situation-reports.create"
+                            )
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-plus-circle" }),
+                          _vm._v(
+                            "\n                    Add Case\n                "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
             ]
           },
           proxy: true
@@ -257,99 +236,117 @@ var render = function() {
     },
     [
       _vm._v(" "),
-      _c("DataViewer", { attrs: { data: _vm.customers.data } }, [
-        _c("div", { staticClass: "card" }, [
-          _c(
-            "div",
-            {
-              staticClass: "table-responsive",
-              staticStyle: { overflow: "initial" }
-            },
-            [
+      _c(
+        "DataViewer",
+        {
+          attrs: {
+            data: _vm.reports,
+            "text-on-empty": "No report available at this time"
+          }
+        },
+        [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h3", { staticClass: "card-title" }, [
+                _vm._v("Latest Situation Report")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "table-responsive" }, [
               _c(
                 "table",
-                {
-                  staticClass:
-                    "table align-items-center table-flush table-hover"
-                },
+                { staticClass: "table table-condensed table-hover" },
                 [
-                  _c("thead", { staticClass: "thead-light" }, [
-                    _c("tr", [
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Customer")
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } })
-                    ])
+                  _c("thead", [
+                    _c("th", [_vm._v("State")]),
+                    _vm._v(" "),
+                    _c("th", [
+                      _vm._v("People Screened"),
+                      _c("br"),
+                      _vm._v("Previously")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", [
+                      _vm._v("People Screened"),
+                      _c("br"),
+                      _vm._v("in Last 24Hrs")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", [
+                      _vm._v("Cases"),
+                      _c("br"),
+                      _vm._v("lab Confirmed")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", [
+                      _vm._v("Cases"),
+                      _c("br"),
+                      _vm._v("on admission")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("Discharge")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("Deaths")])
                   ]),
                   _vm._v(" "),
                   _c(
                     "tbody",
-                    _vm._l(_vm.customers.data, function(customer, index) {
-                      return _c("tr", [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(customer.displayName))]),
-                        _vm._v(" "),
-                        _c("td"),
+                    _vm._l(_vm.reports, function(report, index) {
+                      return _c("tr", { key: index }, [
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.state.name) +
+                              "\n                        "
+                          )
+                        ]),
                         _vm._v(" "),
                         _c("td", [
-                          _c("div", { staticClass: "dropdown" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-secondary dropdown-toggle btn-sm",
-                                attrs: {
-                                  type: "button",
-                                  id: "dropdownMenuButton",
-                                  "data-toggle": "dropdown",
-                                  "aria-haspopup": "true",
-                                  "aria-expanded": "false"
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                    Actions\n                                "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "dropdown-menu",
-                                attrs: {
-                                  "aria-labelledby": "dropdownMenuButton"
-                                }
-                              },
-                              [
-                                _c(
-                                  "inertia-link",
-                                  {
-                                    staticClass: "dropdown-item",
-                                    attrs: {
-                                      method: "post",
-                                      data: { id: customer.id },
-                                      href: _vm.$route(
-                                        "backend.scrud.users.delete"
-                                      )
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                        Delete\n                                    "
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            )
-                          ])
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.screened.previously) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.screened.last24) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.confirmedCount) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.asymptomaticCount) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.dischargedCount) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(report.deathCount) +
+                              "\n                        "
+                          )
                         ])
                       ])
                     }),
@@ -357,10 +354,10 @@ var render = function() {
                   )
                 ]
               )
-            ]
-          )
-        ])
-      ])
+            ])
+          ])
+        ]
+      )
     ],
     1
   )
@@ -558,18 +555,18 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/Pages/users/customers/Index.vue":
+/***/ "./resources/js/Pages/situationReport/Index.vue":
 /*!******************************************************!*\
-  !*** ./resources/js/Pages/users/customers/Index.vue ***!
+  !*** ./resources/js/Pages/situationReport/Index.vue ***!
   \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=6b5ae238& */ "./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238&");
-/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=8ba48608&scoped=true& */ "./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -579,49 +576,49 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "8ba48608",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/users/customers/Index.vue"
+component.options.__file = "resources/js/Pages/situationReport/Index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
-  !*** ./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/users/customers/Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/situationReport/Index.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238& ***!
-  \*************************************************************************************/
+/***/ "./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true& ***!
+  \*************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=6b5ae238& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/users/customers/Index.vue?vue&type=template&id=6b5ae238&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=8ba48608&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/situationReport/Index.vue?vue&type=template&id=8ba48608&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_6b5ae238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_8ba48608_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

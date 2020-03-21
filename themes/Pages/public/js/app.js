@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"a89cff55e09fb25085bd","1":"324cb82da5a0a4015152","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"02317887c3f9ab203ee1","6":"afc5379ebd708ea1eab5","7":"c7bc19904e37558f3bec","8":"931648e585f658cc681f","9":"cf501dd96110f98e2341","10":"39df75202477b042be04","12":"d1a62a578b791ad5d995"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"a89cff55e09fb25085bd","1":"23fd17a91328d3730e9d","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"e0cb89e805c4e07667dd","6":"a6d0934c0df6c23a7750","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"67b6fd80d63808c7dfc1","10":"39c0295ac1bf97cdf8b2","11":"0396c0a487d5f41e3ebd"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13458,108 +13458,108 @@ var map = {
 	"./Dashboard": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		7
+		9
 	],
 	"./Dashboard.vue": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		7
+		9
 	],
 	"./auth/Login": [
 		"./resources/js/Pages/auth/Login.vue",
-		8,
-		10
+		1,
+		7
 	],
 	"./auth/Login.vue": [
 		"./resources/js/Pages/auth/Login.vue",
-		8,
-		10
+		1,
+		7
 	],
 	"./auth/Registration": [
 		"./resources/js/Pages/auth/Registration.vue",
-		8,
-		6
+		1,
+		8
 	],
 	"./auth/Registration.vue": [
 		"./resources/js/Pages/auth/Registration.vue",
-		8,
-		6
+		1,
+		8
 	],
 	"./roles/Details": [
 		"./resources/js/Pages/roles/Details.vue",
-		8,
+		1,
 		0,
 		2
 	],
 	"./roles/Details.vue": [
 		"./resources/js/Pages/roles/Details.vue",
-		8,
+		1,
 		0,
 		2
 	],
 	"./roles/Index": [
 		"./resources/js/Pages/roles/Index.vue",
-		8,
+		1,
 		0,
 		3
 	],
 	"./roles/Index.vue": [
 		"./resources/js/Pages/roles/Index.vue",
-		8,
+		1,
 		0,
 		3
 	],
 	"./situationReport/Create": [
 		"./resources/js/Pages/situationReport/Create.vue",
 		0,
-		1
+		10
 	],
 	"./situationReport/Create.vue": [
 		"./resources/js/Pages/situationReport/Create.vue",
 		0,
-		1
+		10
 	],
 	"./situationReport/Index": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		12
+		5
 	],
 	"./situationReport/Index.vue": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		12
+		5
 	],
 	"./users/Index": [
 		"./resources/js/Pages/users/Index.vue",
-		8,
+		1,
 		0,
 		4
 	],
 	"./users/Index.vue": [
 		"./resources/js/Pages/users/Index.vue",
-		8,
+		1,
 		0,
 		4
 	],
 	"./users/customers/Index": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		5
+		6
 	],
 	"./users/customers/Index.vue": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		5
+		6
 	],
 	"./users/customers/NewCustomer": [
 		"./resources/js/Pages/users/customers/NewCustomer.vue",
 		0,
-		9
+		11
 	],
 	"./users/customers/NewCustomer.vue": [
 		"./resources/js/Pages/users/customers/NewCustomer.vue",
 		0,
-		9
+		11
 	]
 };
 function webpackAsyncContext(req) {
