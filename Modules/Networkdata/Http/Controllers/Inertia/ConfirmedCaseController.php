@@ -57,6 +57,7 @@ class ConfirmedCaseController extends Controller
 
         $case = ConfirmedCaseRepository::init()->addCase($payload['age'],$payload['gender'], $payload['status'], $payload['details']);
 
+        if(!empty($payload['caseMaps']))
         $case->updateCaseMappings($payload['caseMaps']);
 
         flash()->success('Case has been logged successfully!');
