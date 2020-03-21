@@ -28,6 +28,32 @@ Vue.directive('datepicker', {
     },
 });
 
+Vue.directive('typeahead', {
+    // When the bound element is inserted into the DOM...
+    bind: function (el, binding, vnode) {
+
+        window.$script.ready('app', function(){
+
+            var dataSet = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.whitespace,
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                // prefetch: 'http://pages.revox.io/json/countries-list.json',
+                local: binding.value.localStore
+            });
+
+            setTimeout(function(){
+                $(el).typeahead(null, {
+                    source: dataSet,
+                });
+
+                $(el).bind('typeahead:select', function(ev, suggestion) {
+                    vnode.elm.dispatchEvent(new CustomEvent('input'));
+                });
+            }, 500);
+        });
+    },
+});
+
 Vue.directive('summernote', {
     // When the bound element is inserted into the DOM...
     bind: function (el, binding, vnode) {

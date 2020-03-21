@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
+use Modules\Networkdata\Repositories\CaseMapRepository;
 use Modules\Networkdata\Repositories\ConfirmedCaseRepository;
 
 class ConfirmedCaseController extends Controller
@@ -26,9 +27,15 @@ class ConfirmedCaseController extends Controller
         $case_statuses = ConfirmedCaseStatus::toArray();
         $case_source_types = CaseMapSourceTypes::toArray();
 
+        $case_data_mappings = CaseMapRepository::init()->fetchQuery()->get(['source', 'source_type']);
+
+        $case_data_mappings_sources = CaseMapRepository::init()->fetchQuery()->pluck('source')->toArray();
+
         return Inertia::render('networkData/Create', [
             'caseStatuses' => $case_statuses,
-            'sourceTypes' => $case_source_types
+            'sourceTypes' => $case_source_types,
+            'mapping_sources' => $case_data_mappings_sources,
+            'mapping_data' => $case_data_mappings
         ]);
     }
 

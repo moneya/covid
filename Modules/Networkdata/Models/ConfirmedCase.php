@@ -50,18 +50,27 @@ class ConfirmedCase extends Model implements RequiresRefCode, TransformableModel
             /** @var CaseMap $case_map */
             $next_mapping = !empty($mappings[$index + 1]) ? $mappings[$index + 1] : null;
 
-            if(($mappings_count - 2) == $index){
+            if(($mappings_count > 1) && ($mappings_count - 2) == $index){
                 // todo: route network map to confirmed case
                 $edges[] = [
                     'from' => $case_map->getNetworkId(),
                     'to' => $this->getNetworkId()
                 ];
 
+                if($next_mapping)
                 $edges[] = [
                     'from' => $this->getNetworkId(),
                     'to' => $next_mapping->getNetworkId(),
                 ];
-            } else {
+            }elseif(($mappings_count == 1)){
+                // todo: route network map to confirmed case
+                $edges[] = [
+                    'from' => $case_map->getNetworkId(),
+                    'to' => $this->getNetworkId()
+                ];
+            }
+
+            else {
                 if($next_mapping){
                     $edges[] = [
                         'from' => $case_map->getNetworkId(),
@@ -70,8 +79,6 @@ class ConfirmedCase extends Model implements RequiresRefCode, TransformableModel
                 }
             }
         }
-
-
 
         if(!empty($edges)) return $edges;
 

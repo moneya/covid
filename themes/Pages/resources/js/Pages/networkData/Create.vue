@@ -94,9 +94,13 @@
                                             <h5>Case <span class="semi-bold">Map Data</span></h5>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="form-group form-group-default form-group-sm m-b-20">
+                                            <div class="form-group form-group-sm m-b-20">
                                                 <label for="">Source:</label>
-                                                <input type="text" v-model="mappingFormData.source" class="form-control">
+                                                <input type="text" v-typeahead="{
+                                                localStore: mapping_sources
+                                                }" v-model="mappingFormData.source"
+                                                       @input="suggestionSelected"
+                                                       class="form-control">
                                             </div>
 
                                             <div class="form-group form-group-default form-group-sm m-b-20">
@@ -162,6 +166,8 @@
         props: {
             caseStatuses: Object,
             sourceTypes: Object,
+            mapping_sources: Array,
+            mapping_data: Array,
         },
         data(){
             return {
@@ -199,6 +205,15 @@
             },
             removeMapData(index){
                 this.formData.caseMaps.splice(index, 1);
+            },
+            suggestionSelected(event){
+                const suggestion = event.target.value;
+
+                const selected_sourceMap = _.find(this.mapping_data, {source: suggestion});
+
+                if (selected_sourceMap) {
+                    this.mappingFormData.type = selected_sourceMap.source_type;
+                }
             }
 
         },

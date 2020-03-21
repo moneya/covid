@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ef9dd3c4da3a04a955e0","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"8cdf8adb7faeb0a1e0c3","6":"0edc493cec33659f16b3","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"56b818d4d76d855989f2","10":"c9093757ba2b4af9fdc9","11":"a688ce762b2d1090acd5","13":"4347f0f02d04b73ad6d8","14":"7a6c2c7bcb0ca6361b81","15":"51cf0754e0126c8ac86d","16":"57b45c300425411ae57d"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ef9dd3c4da3a04a955e0","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"5d6fe21930f06d4b37f5","6":"fcccb05f0a151e65db6a","7":"3f84343082c6a11abb37","8":"4552684df9c9576fea19","9":"0c5ba8cf3d40210a2f1d","10":"c9093757ba2b4af9fdc9","11":"a688ce762b2d1090acd5","12":"ec7219f909329374d5c2","13":"7b8f4b6313b612ee49aa","14":"68224f0dc1c800e6766c","15":"73a119979018bac676e8"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13458,66 +13458,66 @@ var map = {
 	"./Dashboard": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		9
+		8
 	],
 	"./Dashboard.vue": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		9
+		8
 	],
 	"./auth/Login": [
 		"./resources/js/Pages/auth/Login.vue",
 		1,
-		7
+		12
 	],
 	"./auth/Login.vue": [
 		"./resources/js/Pages/auth/Login.vue",
 		1,
-		7
+		12
 	],
 	"./auth/Registration": [
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
-		8
+		13
 	],
 	"./auth/Registration.vue": [
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
-		8
+		13
 	],
 	"./networkData/CaseMap": [
 		"./resources/js/Pages/networkData/CaseMap.vue",
 		1,
-		16,
+		15,
 		0,
-		15
+		14
 	],
 	"./networkData/CaseMap.vue": [
 		"./resources/js/Pages/networkData/CaseMap.vue",
 		1,
-		16,
+		15,
 		0,
-		15
+		14
 	],
 	"./networkData/Create": [
 		"./resources/js/Pages/networkData/Create.vue",
 		0,
-		13
+		5
 	],
 	"./networkData/Create.vue": [
 		"./resources/js/Pages/networkData/Create.vue",
 		0,
-		13
+		5
 	],
 	"./networkData/Index": [
 		"./resources/js/Pages/networkData/Index.vue",
 		0,
-		14
+		9
 	],
 	"./networkData/Index.vue": [
 		"./resources/js/Pages/networkData/Index.vue",
 		0,
-		14
+		9
 	],
 	"./roles/Details": [
 		"./resources/js/Pages/roles/Details.vue",
@@ -13556,12 +13556,12 @@ var map = {
 	"./situationReport/Index": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		5
+		6
 	],
 	"./situationReport/Index.vue": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		5
+		6
 	],
 	"./users/Index": [
 		"./resources/js/Pages/users/Index.vue",
@@ -13578,12 +13578,12 @@ var map = {
 	"./users/customers/Index": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		6
+		7
 	],
 	"./users/customers/Index.vue": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		6
+		7
 	],
 	"./users/customers/NewCustomer": [
 		"./resources/js/Pages/users/customers/NewCustomer.vue",
@@ -13721,6 +13721,27 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('datepicker', {
       }).on('changeDate', function (e) {
         vnode.elm.dispatchEvent(new CustomEvent('input'));
       });
+    });
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('typeahead', {
+  // When the bound element is inserted into the DOM...
+  bind: function bind(el, binding, vnode) {
+    window.$script.ready('app', function () {
+      var dataSet = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        // prefetch: 'http://pages.revox.io/json/countries-list.json',
+        local: binding.value.localStore
+      });
+      setTimeout(function () {
+        $(el).typeahead(null, {
+          source: dataSet
+        });
+        $(el).bind('typeahead:select', function (ev, suggestion) {
+          vnode.elm.dispatchEvent(new CustomEvent('input'));
+        });
+      }, 500);
     });
   }
 });

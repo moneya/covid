@@ -171,6 +171,8 @@ window.$script.ready('core', function(){
         window.location.origin + '/themes/pages/assets/plugins/switchery/js/switchery.min.js',
         window.location.origin + '/themes/pages/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js',
         window.location.origin + '/themes/pages/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
+        window.location.origin + '/themes/pages/assets/plugins/bootstrap-typehead/typeahead.bundle.min.js',
+        window.location.origin + '/themes/pages/assets/plugins/bootstrap-typehead/typeahead.jquery.min.js',
     ], 'core2');
 });
 
