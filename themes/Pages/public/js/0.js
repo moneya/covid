@@ -283,6 +283,7 @@ __webpack_require__.r(__webpack_exports__);
     AppHeader: _common_AppHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     SideBar: _common_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
+  props: {},
   mounted: function mounted() {
     $('body').addClass('menu-pin menu-behind');
     window.$script.ready('app', function () {
@@ -315,6 +316,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -481,6 +484,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SideBar",
@@ -521,7 +531,7 @@ var render = function() {
             "div",
             { staticClass: "page-content-wrapper " },
             [
-              _c("div", { staticClass: "content " }, [
+              _c("div", { staticClass: "content" }, [
                 _c(
                   "div",
                   {
@@ -668,7 +678,19 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(2),
                 _vm._v(" "),
-                _vm._m(3)
+                _vm._m(3),
+                _vm._v(" "),
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass: "dropdown-item",
+                    attrs: { href: _vm.$route("app.console.cases.create") }
+                  },
+                  [
+                    _c("i", { staticClass: "fa fa-link" }),
+                    _vm._v(" Network Data")
+                  ]
+                )
               ],
               1
             )
@@ -740,8 +762,11 @@ var staticRenderFns = [
         attrs: { href: "#", "data-toggle": "dropdown" }
       },
       [
-        _c("i", { staticClass: "fa fa-plus-circle" }),
-        _vm._v("\n                    Add Case\n                ")
+        _c("i", {
+          staticClass: "fa fa-plus-circle fa-2x",
+          staticStyle: { "vertical-align": "sub" }
+        }),
+        _vm._v("\n                    Quick Add...\n                ")
       ]
     )
   },
@@ -973,6 +998,21 @@ var render = function() {
               _vm._m(2)
             ],
             1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {},
+            [
+              _c(
+                "inertia-link",
+                { attrs: { href: _vm.$route("app.console.cases.index") } },
+                [_c("span", { staticClass: "title" }, [_vm._v("Case Mapping")])]
+              ),
+              _vm._v(" "),
+              _vm._m(3)
+            ],
+            1
           )
         ]),
         _vm._v(" "),
@@ -1035,6 +1075,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "icon-thumbnail" }, [
       _c("i", { staticClass: "fa fa-medkit" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon-thumbnail" }, [
+      _c("i", { staticClass: "fa fa-map" })
     ])
   }
 ]

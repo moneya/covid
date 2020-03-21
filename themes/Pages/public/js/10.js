@@ -245,7 +245,7 @@ var render = function() {
                           _c("span", { staticClass: "bold" }, [
                             _vm._v("COVID-19")
                           ]),
-                          _vm._v(" - Upload Situation Report")
+                          _vm._v(" Upload Situation Report")
                         ]),
                         _vm._v(" "),
                         _c("p", [

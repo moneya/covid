@@ -8,7 +8,7 @@
                             <div class="card-title">Situation Report</div>
                         </div>
                         <div class="card-body">
-                            <h3><span class="bold">COVID-19</span> - Situation Report</h3>
+                            <h3><span class="bold">COVID-19</span> Situation Report</h3>
                             <p>
                                 Situation report Data sheet for COVID-19 to track / monitor epidemic rate
                             </p>

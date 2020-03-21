@@ -31,6 +31,13 @@
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="fa fa-medkit"></i></span>
                 </li>
+
+                <li class="">
+                    <inertia-link :href="$route('app.console.cases.index')">
+                        <span class="title">Case Mapping</span>
+                    </inertia-link>
+                    <span class="icon-thumbnail"><i class="fa fa-map"></i></span>
+                </li>
             </ul>
             <div class="clearfix"></div>
         </div>

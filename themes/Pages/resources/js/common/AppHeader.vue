@@ -21,8 +21,8 @@
             <ul class="d-lg-inline-block d-none notification-list no-margin d-lg-inline-block b-grey b-l no-style p-l-30 p-r-20">
                 <li class="p-r-10 inline">
                     <a href="#" class="text-primary" data-toggle="dropdown">
-                        <i class="fa fa-plus-circle"></i>
-                        Add Case
+                        <i class="fa fa-plus-circle fa-2x" style="vertical-align: sub;"></i>
+                        Quick Add...
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown" >
                         <inertia-link :href="$route('app.console.situation-reports.create')" class="dropdown-item">
@@ -31,6 +31,8 @@
                         <a href="#" class="dropdown-item"><i class="fa fa-medkit"></i> Case (by Nationality)</a>
                         <a href="#" class="dropdown-item"><i class="fa fa-medkit"></i> Case (by Gender)</a>
                         <a href="#" class="dropdown-item"><i class="fa fa-medkit"></i> Testing Labs</a>
+                        <inertia-link :href="$route('app.console.cases.create')" class="dropdown-item">
+                            <i class="fa fa-link"></i> Network Data</inertia-link>
                     </div>
                 </li>
             </ul>

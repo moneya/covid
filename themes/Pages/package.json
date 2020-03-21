@@ -28,6 +28,7 @@
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@inertiajs/inertia": "^0.1.7",
-    "@inertiajs/inertia-vue": "^0.1.2"
+    "@inertiajs/inertia-vue": "^0.1.2",
+    "vis-network": "^7.4.0"
   }
 }

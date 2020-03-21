@@ -8,7 +8,7 @@
             <!-- START PAGE CONTENT WRAPPER -->
             <div class="page-content-wrapper ">
                 <!-- START PAGE CONTENT -->
-                <div class="content ">
+                <div class="content">
                     <!-- START JUMBOTRON -->
                     <div class="jumbotron" data-pages="parallax">
                         <div class=" container-fluid container-fixed-lg sm-p-l-0 sm-p-r-0">
@@ -54,6 +54,9 @@
             Footer,
             AppHeader,
             SideBar
+        },
+        props: {
+
         },
         mounted(){
             $('body').addClass('menu-pin menu-behind');

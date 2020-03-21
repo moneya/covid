@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"a89cff55e09fb25085bd","1":"23fd17a91328d3730e9d","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"e0cb89e805c4e07667dd","6":"a6d0934c0df6c23a7750","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"67b6fd80d63808c7dfc1","10":"39c0295ac1bf97cdf8b2","11":"0396c0a487d5f41e3ebd"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"75e744ce24644704399d","1":"23fd17a91328d3730e9d","2":"a0a5f112cabed0268a33","3":"6858a36696587afc3bdc","4":"d60500c47fce61a4f79f","5":"d5764edaf96e41e4e028","6":"a6d0934c0df6c23a7750","7":"b73be919483d8a9239bd","8":"13c374ee0bc0efc6a732","9":"67b6fd80d63808c7dfc1","10":"423732c1dacfa63b6922","11":"0396c0a487d5f41e3ebd","13":"20950135759c2e4ad827","14":"c7d829bc87f327ebe21f"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13484,6 +13484,26 @@ var map = {
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
 		8
+	],
+	"./networkData/Create": [
+		"./resources/js/Pages/networkData/Create.vue",
+		0,
+		13
+	],
+	"./networkData/Create.vue": [
+		"./resources/js/Pages/networkData/Create.vue",
+		0,
+		13
+	],
+	"./networkData/Index": [
+		"./resources/js/Pages/networkData/Index.vue",
+		0,
+		14
+	],
+	"./networkData/Index.vue": [
+		"./resources/js/Pages/networkData/Index.vue",
+		0,
+		14
 	],
 	"./roles/Details": [
 		"./resources/js/Pages/roles/Details.vue",

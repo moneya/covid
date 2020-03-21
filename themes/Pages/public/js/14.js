@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[14],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/networkData/Index.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
@@ -9,12 +9,49 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/App */ "./resources/js/Layouts/App.vue");
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Index"
+  name: "Index",
+  components: {
+    App: _Layouts_App__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -30,8 +67,100 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("App", {
+    scopedSlots: _vm._u([
+      {
+        key: "page-header",
+        fn: function() {
+          return [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "row d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("div", { staticClass: "col-lg-8" }, [
+                  _c("div", { staticClass: "card card-transparent" }, [
+                    _c("div", { staticClass: "card-header " }, [
+                      _c("div", { staticClass: "card-title" }, [
+                        _vm._v("Network Data")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h3", [
+                        _c("span", { staticClass: "bold" }, [
+                          _vm._v("COVID-19")
+                        ]),
+                        _vm._v(" Case Map")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                            Case data logs\n                        "
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "btn-group btn-group-justified" },
+                    [
+                      _c(
+                        "inertia-link",
+                        {
+                          staticClass: "btn btn-primary btn-lg",
+                          attrs: {
+                            href: _vm.$route("app.console.cases.create")
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-plus-circle" }),
+                          _vm._v(
+                            "\n                        Add Case Map\n                    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-complete btn-lg",
+                          attrs: {
+                            target: "_blank",
+                            href: _vm.$route("app.console.cases.networkmap")
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-map" }),
+                          _vm._v(
+                            "\n                        View Map\n                    "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]
+            )
+          ]
+        },
+        proxy: true
+      }
+    ])
+  })
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
