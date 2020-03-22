@@ -122,17 +122,9 @@
         },
         methods: {
             addRow(count = 1){
-                if(count < 2){
-                    this.rows.push({
-                        key: parseInt(Math.random() * 100000 + '')
-                    });
-                } else {
-                    for (var i = 1; i <= count; i++) {
-                        this.rows.push({
-                            key: parseInt(Math.random() * 100000 + '')
-                        });
-                    }
-                }
+                this.rows.push({
+                    key: parseInt(Math.random() * 100000 + '')
+                });
             },
             removeRow(index){
                 this.rows.splice(index, 1);
