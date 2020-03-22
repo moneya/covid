@@ -2,9 +2,11 @@
 
 
 use Illuminate\Support\Facades\Route;
-use Themes\Sitefront\Http\Controllers\HomeController;
+use Themes\Sitefront\Http\Controllers\DashboardController;
 
-Route::get('/', [
-    HomeController::class,
-    'home'
-]);
+Route::name('frontend.')->group(function(){
+    Route::get('/', [
+        DashboardController::class,
+        'dashboard'
+    ])->name('dashboard');
+});

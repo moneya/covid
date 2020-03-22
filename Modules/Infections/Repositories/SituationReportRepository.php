@@ -74,7 +74,6 @@ class SituationReportRepository extends BaseRepository
                 ->on($table . '.id', '=', 'latest_reports.max_id')
             ;
         })
-            ->get()
-            ;
+            ->get();
     }
 }

@@ -301,6 +301,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -463,8 +466,13 @@ var render = function() {
         [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _c("h3", { staticClass: "card-title" }, [
-                _vm._v("Latest Situation Report")
+              _c("h5", [
+                _vm._v(
+                  "\n                    Situation Report\n                    "
+                ),
+                _c("span", { staticClass: "bold" }, [
+                  _vm._v(_vm._s(_vm.reports[0].attributes.published_at))
+                ])
               ])
             ]),
             _vm._v(" "),

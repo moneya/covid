@@ -27,7 +27,10 @@
         <DataViewer :data="reports" text-on-empty="No report available at this time">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Latest Situation Report</h3>
+                    <h5>
+                        Situation Report
+                        <span class="bold">{{reports[0].attributes.published_at}}</span>
+                    </h5>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-condensed table-hover">
