@@ -30,10 +30,13 @@
                         </inertia-link>
 
                         <inertia-link :href="$route('app.console.case-by-nationality.create')" class="dropdown-item">
-                            <i class="fa fa-medkit"></i> Case By Nationality
+                            <i class="fa fa-medkit"></i> Cases By Nationality
                         </inertia-link>
 
-                        <a href="#" class="dropdown-item"><i class="fa fa-medkit"></i> Case (by Gender)</a>
+                        <inertia-link :href="$route('app.console.case-by-gender.create')" class="dropdown-item">
+                            <i class="fa fa-medkit"></i> Cases By Gender
+                        </inertia-link>
+
                         <a href="#" class="dropdown-item"><i class="fa fa-medkit"></i> Testing Labs</a>
                         <inertia-link :href="$route('app.console.cases.create')" class="dropdown-item">
                             <i class="fa fa-link"></i> Network Data</inertia-link>

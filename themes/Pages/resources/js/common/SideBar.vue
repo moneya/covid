@@ -34,7 +34,14 @@
 
                 <li class="">
                     <inertia-link :href="$route('app.console.case-by-nationality.index')">
-                        <span class="">Case By Nationality</span>
+                        <span class="">Cases By Nationality</span>
+                    </inertia-link>
+                    <span class="icon-thumbnail"><i class="fa fa-globe"></i></span>
+                </li>
+
+                <li class="">
+                    <inertia-link :href="$route('app.console.case-by-gender.index')">
+                        <span class="">Cases By Gender</span>
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="fa fa-globe"></i></span>
                 </li>

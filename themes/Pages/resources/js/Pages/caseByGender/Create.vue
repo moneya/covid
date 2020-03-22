@@ -5,10 +5,10 @@
                 <div class="col-lg-9">
                     <div class="card card-transparent">
                         <div class="card-header ">
-                            <div class="card-title">Cases by Nationality</div>
+                            <div class="card-title">Cases by Gender</div>
                         </div>
                         <div class="card-body">
-                            <h3><span class="bold">COVID-19</span> <i class="fa fa-globe"></i> Upload Global Cases</h3>
+                            <h3><span class="bold">COVID-19</span> Gender Statistics Data Sheet</h3>
                             <p>
                                 Data input sheet for COVID-19 to track / monitor epidemic rate
                             </p>
@@ -40,20 +40,18 @@
                     <div class="card-body">
                         <table class="table table-hover">
                             <thead>
-                            <th>Country</th>
+                            <th>Gender</th>
                             <th style="width: 20%;">Cases</th>
                             <th style="width: 5%;"></th>
                             </thead>
                             <tbody>
                             <tr v-for="(row, index) in rows" :data-key="row.key" :key="row.key">
                                 <td>
-                                    <input type="text"
-                                           v-typeahead="{
-                                                apiSource: 'http://pages.revox.io/json/countries-list.json'
-                                                }"
-                                           name="country"
-                                           placeholder="Name of country:"
-                                           class="form-control form-control-sm">
+                                    <select name="gender" id="" class="form-control form-control-sm">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Unidentified">Unidentified</option>
+                                    </select>
                                 </td>
                                 <td>
                                     <input type="number" @blur="validateInput($event)"
@@ -105,7 +103,7 @@
             uploadDataSheet(){
                 const records = this.aggregateData();
                 window.System.setActivityMessageText('Uploading data sheet');
-                this.$inertia.post(this.$route('app.console.case-by-nationality.save', {
+                this.$inertia.post(this.$route('app.console.case-by-gender.save', {
                     date: this.datePublished,
                     records: records
                 }));
@@ -126,44 +124,26 @@
             collateRowData(row){
                 const tableRow = $('tr[data-key=' + row.key + ']')[0];
                 const vm = this;
-                const cells = $(tableRow).children();
+                const cells = $(tableRow).children('td');
                 var rowData = {};
 
                 for (var index in cells){
+
                     if(isNaN(index)) {
                         continue;
                     }
 
                     const cell = cells[index];
 
-                    const inputFields = $(cell).find('input, select, textarea');
+                    const inputField = $(cell).children().first();
 
-                    if(inputFields.length > 1){
+                    if(inputField !== undefined){
+                        const value = inputField.val();
 
-                        for (var i = 0; i < inputFields.length; i++) {
-                            const inputField = inputFields[i];
-
-                            if(inputField !== undefined){
-                                const value = $(inputField).val();
-
-                                if(value){
-                                    rowData[$(inputField).attr('name')] = value;
-                                }
-                            }
-                        }
-                    } else {
-                        const inputField = inputFields;
-
-                        if(inputField !== undefined){
-                            const value = inputField.val();
-
-                            if(value){
-                                rowData[$(inputField).attr('name')] = value;
-                            }
+                        if(value){
+                            rowData[$(inputField).attr('name')] = value;
                         }
                     }
-
-
                 }
 
                 return rowData;

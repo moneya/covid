@@ -157,24 +157,18 @@
                             <table class="table table-hover" id="basicTable">
                                 <thead>
                                 <tr>
-
-                                    <th style="width:40%">Male</th>
-                                    <th style="width:30%">Female</th>
-                                    <th style="width:30%">Unidentified</th>
-
+                                    @foreach($gender_case_statistics as $gender_case_statistic)
+                                    <th style="width:40%">{{$gender_case_statistic->gender}}</th>
+                                    @endforeach
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
+                                    @foreach($gender_case_statistics as $gender_case_statistic)
                                     <td class="v-align-middle ">
-                                        10
+                                        {{$gender_case_statistic->overall_cases_count}}
                                     </td>
-                                    <td class="v-align-middle">
-                                        20
-                                    </td>
-                                    <td class="v-align-middle">
-                                        30
-                                    </td>
+                                    @endforeach
                                 </tr>
 
 

@@ -9,6 +9,7 @@
 namespace Themes\Sitefront\Http\Controllers;
 
 
+use Modules\Infections\Repositories\CaseByGenderRepository;
 use Modules\Infections\Repositories\SituationReportRepository;
 
 class DashboardController extends Controller
@@ -35,11 +36,14 @@ class DashboardController extends Controller
             ];
         });
 
+        $gender_case_statistics = CaseByGenderRepository::init()->fetchLatestReport();
+
         return view('pages.dashboard',
             compact('latest_situation_report',
                 'total_confirmed_count', 'total_asymptomatic_count',
                 'total_discharged_count', 'total_death_count',
-                'cases_heat_map_data', 'screening_heat_map_data'));
+                'cases_heat_map_data', 'screening_heat_map_data',
+                'gender_case_statistics'));
     }
 
 }

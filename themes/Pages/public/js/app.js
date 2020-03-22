@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"e0ef37a8d6cc777345e7","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"5d6fe21930f06d4b37f5","6":"822f875cdd26c7ec915d","7":"3f84343082c6a11abb37","8":"4552684df9c9576fea19","9":"0c5ba8cf3d40210a2f1d","10":"750d1532346da0cd6b89","11":"a688ce762b2d1090acd5","12":"ec7219f909329374d5c2","13":"7b8f4b6313b612ee49aa","14":"68224f0dc1c800e6766c","15":"73a119979018bac676e8","16":"1df7b5e12df27cbc721c","17":"6993952431776acd7fd2"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"4285064032eb22cde322","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"1343833c55259c0937d8","6":"8ec1b6cf36919de5ac7c","7":"f8ec74520a9e85fc1cb3","8":"0ec24a3ee0cfc45def46","9":"2bbf2bf0b2169d1f176d","10":"c61136bfeebce4003904","11":"64c2187d644180c553a3","12":"7d82291dce39f2512d06","13":"34944a90e4808fa28d0b","14":"a970432de3f256c7621c","15":"289a454ed3f5bd9abbe8","16":"809a04dc6a51e1e23b85","17":"e463ea135a67f5419e12","18":"8720220d79d0c2aab36a","19":"5b34f2ed6dd088329ea2"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13458,86 +13458,106 @@ var map = {
 	"./Dashboard": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		8
+		10
 	],
 	"./Dashboard.vue": [
 		"./resources/js/Pages/Dashboard.vue",
 		0,
-		8
+		10
 	],
 	"./auth/Login": [
 		"./resources/js/Pages/auth/Login.vue",
 		1,
-		12
+		16
 	],
 	"./auth/Login.vue": [
 		"./resources/js/Pages/auth/Login.vue",
 		1,
-		12
+		16
 	],
 	"./auth/Registration": [
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
-		13
+		17
 	],
 	"./auth/Registration.vue": [
 		"./resources/js/Pages/auth/Registration.vue",
 		1,
-		13
+		17
+	],
+	"./caseByGender/Create": [
+		"./resources/js/Pages/caseByGender/Create.vue",
+		0,
+		11
+	],
+	"./caseByGender/Create.vue": [
+		"./resources/js/Pages/caseByGender/Create.vue",
+		0,
+		11
+	],
+	"./caseByGender/Index": [
+		"./resources/js/Pages/caseByGender/Index.vue",
+		0,
+		5
+	],
+	"./caseByGender/Index.vue": [
+		"./resources/js/Pages/caseByGender/Index.vue",
+		0,
+		5
 	],
 	"./caseByNationality/Create": [
 		"./resources/js/Pages/caseByNationality/Create.vue",
 		0,
-		17
+		12
 	],
 	"./caseByNationality/Create.vue": [
 		"./resources/js/Pages/caseByNationality/Create.vue",
 		0,
-		17
+		12
 	],
 	"./caseByNationality/Index": [
 		"./resources/js/Pages/caseByNationality/Index.vue",
 		0,
-		16
+		6
 	],
 	"./caseByNationality/Index.vue": [
 		"./resources/js/Pages/caseByNationality/Index.vue",
 		0,
-		16
+		6
 	],
 	"./networkData/CaseMap": [
 		"./resources/js/Pages/networkData/CaseMap.vue",
 		1,
-		15,
+		19,
 		0,
-		14
+		18
 	],
 	"./networkData/CaseMap.vue": [
 		"./resources/js/Pages/networkData/CaseMap.vue",
 		1,
-		15,
+		19,
 		0,
-		14
+		18
 	],
 	"./networkData/Create": [
 		"./resources/js/Pages/networkData/Create.vue",
 		0,
-		5
+		7
 	],
 	"./networkData/Create.vue": [
 		"./resources/js/Pages/networkData/Create.vue",
 		0,
-		5
+		7
 	],
 	"./networkData/Index": [
 		"./resources/js/Pages/networkData/Index.vue",
 		0,
-		9
+		13
 	],
 	"./networkData/Index.vue": [
 		"./resources/js/Pages/networkData/Index.vue",
 		0,
-		9
+		13
 	],
 	"./roles/Details": [
 		"./resources/js/Pages/roles/Details.vue",
@@ -13566,22 +13586,22 @@ var map = {
 	"./situationReport/Create": [
 		"./resources/js/Pages/situationReport/Create.vue",
 		0,
-		10
+		14
 	],
 	"./situationReport/Create.vue": [
 		"./resources/js/Pages/situationReport/Create.vue",
 		0,
-		10
+		14
 	],
 	"./situationReport/Index": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		6
+		8
 	],
 	"./situationReport/Index.vue": [
 		"./resources/js/Pages/situationReport/Index.vue",
 		0,
-		6
+		8
 	],
 	"./users/Index": [
 		"./resources/js/Pages/users/Index.vue",
@@ -13598,22 +13618,22 @@ var map = {
 	"./users/customers/Index": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		7
+		9
 	],
 	"./users/customers/Index.vue": [
 		"./resources/js/Pages/users/customers/Index.vue",
 		0,
-		7
+		9
 	],
 	"./users/customers/NewCustomer": [
 		"./resources/js/Pages/users/customers/NewCustomer.vue",
 		0,
-		11
+		15
 	],
 	"./users/customers/NewCustomer.vue": [
 		"./resources/js/Pages/users/customers/NewCustomer.vue",
 		0,
-		11
+		15
 	]
 };
 function webpackAsyncContext(req) {
