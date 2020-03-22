@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<!-- Mirrored from pages.revox.io/dashboard/4.1.0/html/casual/charts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 May 2019 19:34:36 GMT -->
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta charset="utf-8" />
+		<title>COVID-19 Nigeria Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<meta content="A collection of useful data visualisation regarding the COVID-19 virus outbreak in Nigeria." name="description" />
+		<meta content="INNOVERNG" name="author" />
+		<link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="assets/plugins/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="assets/plugins/mapplic/css/mapplic.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/rickshaw/rickshaw.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+        <link class="main-stylesheet" href="pages/css/themes/modern.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/jqvmap.min.css" rel="stylesheet"/>
+
+	</head>
+	<body class="fixed-header horizontal-menu horizontal-app-menu ">
+		<div class="header p-r-0 bg-primary">
+			<div class="header-inner header-md-height">
+				<a href="#" class="btn-link toggle-sidebar d-lg-none pg pg-menu text-white" data-toggle="horizontal-menu"></a>
+				<div class="">
+					<div class="brand inline no-border d-sm-inline-block">
+						<h4 class="text-white"> COVID19 Nigeria</h4>
+					</div>
+				</div>
+
+			</div>
+			<div class="bg-white">
+					<div class="container p-0">
+						<div class="menu-bar header-sm-height" data-pages-init='horizontal-menu' data-hide-extra-li="4">
+							<a href="#" class="btn-link toggle-sidebar d-lg-none pg pg-close" data-toggle="horizontal-menu">
+							</a>
+							<ul>
+								<li class=" active">
+									<a href="/">Dashboard</a>
+								</li>
+								<li>
+									<a href="/cases.html"><span class="title">Cases</span></a>
+								</li>
+
+								<li>
+									<a href="/"><span class="title">Infographics</span></a>
+								</li>
+
+								<li>
+									<a href="/"><span class="title">Disease Tracing</span></a>
+								</li>
+
+								<li>
+									<a href="/"><span class="title">Information</span></a>
+								</li>
+
+								
+								<li>
+									<a href="/testing_areas.html"><span class="title">Testing Areas</span></a>
+								</li>
+
+							</ul>
+
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-container ">
+			<div class="page-content-wrapper ">
+				<div class="content ">
+					<div class="bg-white">
+						<div class="container">
+							<h6 class="semi-bold m-t-0 p-t-10 p-b-10">Dashboard of the COVID-19 Virus Outbreak in Nigeria</h6>
+						</div>
+					</div>
+                    <!-- end -->
+
+
+                    					<!-- start of analytics -->
+                                        <div class="container sm-padding-10 p-t-20 p-l-0 p-r-0">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-sm-6 d-flex flex-column">
+                                                    <div class="card no-border widget-loader-bar m-b-10">
+                                                        <div class="container-xs-height full-height">
+                                                            <div class="row-xs-height">
+                                                                <div class="col-xs-height col-top">
+                                                                    <div class="card-header  top-left top-right">
+                                                                        <div class="card-title">
+                                                                            <span class="font-montserrat fs-11 all-caps">Status 
+                                                                            </span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-top">
+                                                                <div class="p-l-20 p-t-50 p-b-40 p-r-20">
+                                                                    <h3 class="no-margin p-b-5"> In Hospital</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-bottom">
+                                                                <div class="progress progress-small m-b-0">
+                                                                    <div class="progress-bar progress-bar-complete" style="width:100%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div> <!-- end -->
+                    
+                                                <div class="col-lg-3 col-sm-6 d-flex flex-column">
+                                                    <div class="card no-border widget-loader-bar m-b-10">
+                                                        <div class="container-xs-height full-height">
+                                                            <div class="row-xs-height">
+                                                                <div class="col-xs-height col-top">
+                                                                    <div class="card-header  top-left top-right">
+                                                                        <div class="card-title">
+                                                                            <span class="font-montserrat fs-11 all-caps"> Gender
+                                                                            </span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-top">
+                                                                <div class="p-l-20 p-t-50 p-b-40 p-r-20">
+                                                                    <h3 class="no-margin p-b-5">Female</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-bottom">
+                                                                <div class="progress progress-small m-b-0">
+                                                                    <div class="progress-bar progress-bar-warning" style="width:100%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div> <!-- end -->
+                    
+                                                <div class="col-lg-3 col-sm-6 d-flex flex-column">
+                                                    <div class="card no-border widget-loader-bar m-b-10">
+                                                        <div class="container-xs-height full-height">
+                                                            <div class="row-xs-height">
+                                                                <div class="col-xs-height col-top">
+                                                                    <div class="card-header  top-left top-right">
+                                                                        <div class="card-title">
+                                                                            <span class="font-montserrat fs-11 all-caps">Age
+                                                                            </span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-top">
+                                                                <div class="p-l-20 p-t-50 p-b-40 p-r-20">
+                                                                    <h3 class="no-margin p-b-5">24</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-bottom">
+                                                                <div class="progress progress-small m-b-0">
+                                                                    <div class="progress-bar progress-bar-success" style="width:100%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div> <!-- end -->
+                    
+                                                <div class="col-lg-3 col-sm-6 d-flex flex-column">
+                                                    <div class="card no-border widget-loader-bar m-b-10">
+                                                        <div class="container-xs-height full-height">
+                                                            <div class="row-xs-height">
+                                                                <div class="col-xs-height col-top">
+                                                                    <div class="card-header  top-left top-right">
+                                                                        <div class="card-title">
+                                                                            <span class="font-montserrat fs-11 all-caps">Source
+                                                                            </span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-top">
+                                                                <div class="p-l-20 p-t-50 p-b-40 p-r-20">
+                                                                    <h3 class="no-margin p-b-5">Flight 1430</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-bottom">
+                                                                <div class="progress progress-small m-b-0">
+                                                                    <div class="progress-bar progress-bar-master" style="width:100%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div> <!-- end -->
+                    
+                                                <!-- end -->
+                                            </div>
+                                        </div>
+                                        <!-- analytics end -->
+                                        
+				
+                                        <!-- start of analytics -->
+                                        <div class="container sm-padding-10 p-t-20 p-l-0 p-r-0">
+                                            <div class="row">                
+                                                <div class="col-lg-12 col-sm-6 d-flex flex-column">
+                                                    <div class="card  widget-loader-bar m-b-10">
+                                                        <div class="container-xs-height full-height">
+                                                        <div class="row-xs-height">
+                                                            <div class="col-xs-height col-top">
+                                                                <div class="p-l-20 p-t-10 p-b-10 p-r-20">
+                                                                    <h6 class="no-margin p-b-5 semi-bold">
+                                                                        
+
+                                                            The case is a 53 year-old male Singapore Citizen with no recent travel history to China, but had been in Malaysia on 6, 11 and 17 January 2020.
+
+                                                            He reported onset of symptoms on 23 January, and had visited a general practitioner (GP) clinic on the same day. He visited another GP clinic on 28 January, and was admitted to CGH on 1 February. Subsequent test results confirmed 2019-nCoV infection on 6 February at about 11pm.He stays at Tampines Street 24.
+
+                                                            Prior to hospital admission, he had been to The Life Church and Missions Singapore (146B Paya Lebar Road) and had gone visiting family and friends during Chinese New Year.
+
+                                                                    </h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div> <!-- end -->
+									
+
+                                            </div>
+										</div>
+
+					<!-- end of all ends -->
+				</div>
+					<!-- start of footer -->			
+		<div class=" container   container-fixed-lg footer">
+			<div class="copyright sm-text-center">
+				<p class="small no-margin pull-left sm-pull-reset">
+					<span class="hint-text">Copyright &copy; 2020 </span>
+					<span class="font-montserrat">INNOVERNG</span>.
+					<span class="hint-text">All rights reserved. </span>
+				</p>
+				<p class="small no-margin pull-right sm-pull-reset">
+					Hand-crafted <span class="hint-text">&amp; made with Love</span>
+				</p>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+					<!-- end of all ends -->
+			</div>
+		</div>
+		 
+
+
+
+
+
+        <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/popper/umd/popper.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+        <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+        <script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/lib/d3.v3.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/nv.d3.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/utils.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/tooltip.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/interactiveLayer.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/models/axis.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/models/line.js" type="text/javascript"></script>
+        <script src="assets/plugins/nvd3/src/models/lineWithFocusChart.js" type="text/javascript"></script>
+        <script src="assets/js/rickshaw.js"></script>
+        <script src="assets/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/skycons/skycons.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        <script src="pages/js/pages.min.js"></script>
+
+		<script src="assets/js/scripts.js" type="text/javascript"></script>
+
+
+
+
+
+</body>
+</html>

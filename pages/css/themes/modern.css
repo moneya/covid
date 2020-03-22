@@ -6873,6 +6873,7 @@ span.dynatree-empty, span.dynatree-vline, span.dynatree-connector, span.dynatree
 	position: relative;
 	margin-bottom: 20px;
 	width: 100%;
+	border: 1px solid rgba(72,94,144,0.16) !important;
 	word-wrap: none
 }
 
