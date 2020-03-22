@@ -20,6 +20,11 @@ class ConfirmedCase extends Model implements RequiresRefCode, TransformableModel
         'gender', 'age', 'status', 'details'
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'ref_code';
+    }
+
     public function maps()
     {
         return $this->belongsToMany(CaseMap::class,'case_mapping_pivot', 'case_id', 'map_id');

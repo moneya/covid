@@ -90,9 +90,7 @@
                     <div class="card-header ">
                         <h5 class="text-complete pull-left fs-12">Cases Reported <i
                                     class="fa fa-circle text-complete fs-11"></i></h5>
-                        <div class="pull-right small hint-text">
-                            Last Updated: March 19, 2020
-                        </div>
+
                         <div class="clearfix"></div>
                     </div>
                     <div class="card-body">
@@ -100,37 +98,34 @@
                             <table class="table table-hover" id="basicTable">
                                 <thead>
                                 <tr>
-
                                     <th style="width:1%" class="text-center"></th>
-                                    <th style="width:20%">Case</th>
-                                    <th style="width:20%">Patient</th>
-                                    <th style="width:29%">Infection Source</th>
-                                    <th style="width:15%">Country of Origin</th>
-                                    <th style="width:15%">Nationality</th>
+                                    <th style="width:20%"></th>
+                                    <th style="width:20%">Gender</th>
+                                    <th style="width:20%">Age</th>
+                                    <th style="width:29%">Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($confirmed_cases as $confirmed_case)
                                 <tr>
                                     <td class="v-align-middle">
-                                        1
+                                        {{$loop->iteration}}
                                     </td>
                                     <td class="v-align-middle ">
-                                        <a href="#" class="text-complete bold">100 </a>
+                                        <a href="{{route('frontend.confirmed-cases.details', ['confirmedCase' => $confirmed_case->ref_code])}}"
+                                           class="text-complete bold">{{$confirmed_case->ref_code}}</a>
                                     </td>
                                     <td class="v-align-middle">
-                                        <p>one african man</p>
+                                        {{$confirmed_case->gender}}
                                     </td>
                                     <td class="v-align-middle">
-                                        <p>Local Transmission</p>
+                                        {{$confirmed_case->age}}
                                     </td>
                                     <td class="v-align-middle">
-                                        <p>Italy</p>
-                                    </td>
-                                    <td class="v-align-middle">
-                                        <p>Nigerian</p>
+                                        {{strtoupper($confirmed_case->status)}}
                                     </td>
                                 </tr>
-
+                                @endforeach
 
                                 </tbody>
                             </table>

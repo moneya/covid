@@ -53,8 +53,6 @@
 
             var screeningHeatMapData =  @php echo $screening_heat_map_data @endphp;
 
-
-
             $("#vmap2").vectorMap({
                 map: 'nigeria_ng',
                 backgroundColor: '#ffffff',
