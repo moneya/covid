@@ -34,11 +34,9 @@ class DashboardController extends Controller
         $screening_heat_map_data = $latest_situation_report->mapWithKeys(function($report){
             return [
                 strtolower($report->state->state_code) =>
-                    $report->screened_last_24hr
+                    $report->screened_last_24hr + $report->prev_screened
             ];
         });
-
-//        dd($cases_heat_map_data);
 
         $gender_case_statistics = CaseByGenderRepository::init()->fetchLatestReport();
 
