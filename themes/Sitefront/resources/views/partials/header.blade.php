@@ -26,7 +26,7 @@
                     </li>
 
                     <li>
-                        <a href="/"><span class="title">Disease Tracing</span></a>
+                        <a href="{{route('app.console.cases.networkmap')}}" target="_blank"><span class="title">Disease Tracing</span></a>
                     </li>
 
                     <li>

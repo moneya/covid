@@ -147,9 +147,11 @@
                     <div class="card-header ">
                         <h5 class="text-complete pull-left fs-12">Gender <i
                                     class="fa fa-circle text-complete fs-11"></i></h5>
+                        @if($gender_case_statistics->count() > 0)
                         <div class="pull-right small hint-text">
-                            Last Updated: March 19, 2020
+                            Last Updated: {{$gender_case_statistics->first()->published_at->format('jS M, Y')}}
                         </div>
+                        @endif
                         <div class="clearfix"></div>
                     </div>
                     <div class="card-body">

@@ -2,9 +2,11 @@
     <div class="card-header ">
         <h5 class="text-complete pull-left fs-12">Screening HeatMap <i
                     class="fa fa-circle text-complete fs-11"></i></h5>
-        <div class="pull-right small hint-text">
-            Last Updated: March 19, 2020
-        </div>
+        @if($latest_situation_report->count() > 0)
+            <div class="pull-right small hint-text">
+                Last Updated: {{$latest_situation_report->first()->published_at->format('jS M, Y')}}
+            </div>
+        @endif
         <div class="clearfix"></div>
     </div>
     <div class="card-description">
