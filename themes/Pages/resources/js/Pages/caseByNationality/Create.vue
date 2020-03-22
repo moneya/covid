@@ -5,10 +5,10 @@
                 <div class="col-lg-9">
                     <div class="card card-transparent">
                         <div class="card-header ">
-                            <div class="card-title">Situation Report</div>
+                            <div class="card-title">Cases by Nationality</div>
                         </div>
                         <div class="card-body">
-                            <h3><span class="bold">COVID-19</span> Upload Situation Report</h3>
+                            <h3><span class="bold">COVID-19</span> <i class="fa fa-globe"></i> Upload Global Cases</h3>
                             <p>
                                 Data input sheet for COVID-19 to track / monitor epidemic rate
                             </p>
@@ -37,54 +37,30 @@
                                    v-datepicker>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-condensed table-hover">
+                    <div class="card-body">
+                        <table class="table table-hover">
                             <thead>
-                            <th style="width: 20%;">State</th>
-                            <th>People Screened<br>Previously</th>
-                            <th>People Screened<br>in Last 24Hrs</th>
-                            <th>Cases<br>lab Confirmed</th>
-                            <th>Cases<br>on admission</th>
-                            <th>Discharge</th>
-                            <th>Deaths</th>
+                            <th>Country</th>
+                            <th style="width: 20%;">Cases</th>
                             <th style="width: 5%;"></th>
                             </thead>
                             <tbody>
                             <tr v-for="(row, index) in rows" :data-key="row.key" :key="row.key">
                                 <td>
-                                    <select class="form-control form-control-sm" name="state">
-                                        <option v-for="state in states" :value="state.id">{{state.state_name}}</option>
-                                    </select>
+                                    <input type="text"
+                                           v-typeahead="{
+                                                apiSource: 'http://pages.revox.io/json/countries-list.json'
+                                                }"
+                                           name="country"
+                                           placeholder="Name of country:"
+                                           class="form-control form-control-sm">
                                 </td>
                                 <td>
-                                    <input type="number" @blur="validateInput($event)" name="prev_screened" min="0" value="0" class="form-control form-control-sm">
+                                    <input type="number" @blur="validateInput($event)"
+                                           name="case_count" min="0" value="0"
+                                           class="form-control form-control-sm">
                                 </td>
-                                <td>
-                                    <input type="number" min="0" name="screened_last_24hr"
-                                           @blur="validateInput($event)"
-                                           value="0" class="form-control form-control-sm">
-                                </td>
-                                <td>
-                                    <input type="number" min="0" value="0"
-                                           @blur="validateInput($event)"
-                                           name="confirmed" class="form-control form-control-sm">
-                                </td>
-                                <td>
-                                    <input type="number" min="0" value="0"
-                                           @blur="validateInput($event)"
-                                           name="on_admission" class="form-control form-control-sm">
-                                </td>
-                                <td>
-                                    <input type="number" min="0" value="0"
-                                           @blur="validateInput($event)"
-                                           name="discharge" class="form-control form-control-sm">
-                                </td>
-                                <td>
-                                    <input type="number" min="0" value="0"
-                                           @blur="validateInput($event)"
-                                           name="deaths" class="form-control form-control-sm">
-                                </td>
-                                <td class="padding-0 text-right ">
+                                <td class="padding-0 text-right">
                                     <button class="btn btn-xs btn-danger m-r-5"
                                             @click="removeRow(index)"
                                             v-show="rows.length > 1">
@@ -111,9 +87,6 @@
     export default {
         name: "Create",
         components: {App},
-        props: {
-            states: Array
-        },
         data(){
             return {
                 rows: [],
@@ -122,17 +95,9 @@
         },
         methods: {
             addRow(count = 1){
-                if(count < 2){
-                    this.rows.push({
-                        key: parseInt(Math.random() * 100000 + '')
-                    });
-                } else {
-                    for (var i = 1; i <= count; i++) {
-                        this.rows.push({
-                            key: parseInt(Math.random() * 100000 + '')
-                        });
-                    }
-                }
+                this.rows.push({
+                    key: parseInt(Math.random() * 100000 + '')
+                });
             },
             removeRow(index){
                 this.rows.splice(index, 1);
@@ -140,7 +105,7 @@
             uploadDataSheet(){
                 const records = this.aggregateData();
                 window.System.setActivityMessageText('Uploading data sheet');
-                this.$inertia.post(this.$route('app.console.situation-reports.save', {
+                this.$inertia.post(this.$route('app.console.case-by-nationality.save', {
                     date: this.datePublished,
                     records: records
                 }));
@@ -166,21 +131,41 @@
 
                 for (var index in cells){
                     if(isNaN(index)) {
-                        console.log('cell index', index);
                         continue;
                     }
 
                     const cell = cells[index];
 
-                    const inputField = $(cell).children().first();
+                    const inputFields = $(cell).find('input, select, textarea');
 
-                    if(inputField !== undefined){
-                        const value = inputField.val();
+                    if(inputFields.length > 1){
 
-                        if(value){
-                            rowData[$(inputField).attr('name')] = value;
+                        for (var i = 0; i < inputFields.length; i++) {
+                            const inputField = inputFields[i];
+
+                            if(inputField !== undefined){
+                                const value = $(inputField).val();
+
+                                if(value){
+                                    rowData[$(inputField).attr('name')] = value;
+                                    break;
+                                }
+                            }
+                        }
+                    } else {
+                        const inputField = inputFields;
+
+                        if(inputField !== undefined){
+                            const value = inputField.val();
+
+                            if(value){
+                                rowData[$(inputField).attr('name')] = value;
+                                break;
+                            }
                         }
                     }
+
+
                 }
 
                 return rowData;

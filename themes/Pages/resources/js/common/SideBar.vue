@@ -20,21 +20,28 @@
             <ul class="menu-items">
                 <li class="m-t-30">
                     <inertia-link href="/app/console">
-                        <span class="title">Dashboard</span>
+                        <span class="">Dashboard</span>
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="pg-home"></i></span>
                 </li>
 
                 <li class="">
                     <inertia-link :href="$route('app.console.situation-reports.index')">
-                        <span class="title">Situation Reports</span>
+                        <span class="">Situation Reports</span>
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="fa fa-medkit"></i></span>
                 </li>
 
                 <li class="">
+                    <inertia-link :href="$route('app.console.case-by-nationality.index')">
+                        <span class="">Case By Nationality</span>
+                    </inertia-link>
+                    <span class="icon-thumbnail"><i class="fa fa-globe"></i></span>
+                </li>
+
+                <li class="">
                     <inertia-link :href="$route('app.console.cases.index')">
-                        <span class="title">Case Mapping</span>
+                        <span class="">Case Mapping</span>
                     </inertia-link>
                     <span class="icon-thumbnail"><i class="fa fa-map"></i></span>
                 </li>

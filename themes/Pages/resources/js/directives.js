@@ -37,7 +37,8 @@ Vue.directive('typeahead', {
             var dataSet = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.whitespace,
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
-                // prefetch: 'http://pages.revox.io/json/countries-list.json',
+                // 'http://pages.revox.io/json/countries-list.json'
+                prefetch: binding.value.apiSource,
                 local: binding.value.localStore
             });
 

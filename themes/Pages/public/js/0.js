@@ -179,6 +179,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AppHeader",
   methods: {
@@ -236,6 +240,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue_src_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue/src/app */ "./node_modules/@inertiajs/inertia-vue/src/app.js");
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -482,11 +493,23 @@ var render = function() {
                   ]
                 ),
                 _vm._v(" "),
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass: "dropdown-item",
+                    attrs: {
+                      href: _vm.$route("app.console.case-by-nationality.create")
+                    }
+                  },
+                  [
+                    _c("i", { staticClass: "fa fa-medkit" }),
+                    _vm._v(" Case By Nationality\n                    ")
+                  ]
+                ),
+                _vm._v(" "),
                 _vm._m(1),
                 _vm._v(" "),
                 _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3),
                 _vm._v(" "),
                 _c(
                   "inertia-link",
@@ -523,7 +546,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "dropdown pull-right d-lg-block d-none" }, [
-        _vm._m(4),
+        _vm._m(3),
         _vm._v(" "),
         _c(
           "div",
@@ -532,11 +555,11 @@ var render = function() {
             attrs: { role: "menu" }
           },
           [
+            _vm._m(4),
+            _vm._v(" "),
             _vm._m(5),
             _vm._v(" "),
             _vm._m(6),
-            _vm._v(" "),
-            _vm._m(7),
             _vm._v(" "),
             _c(
               "a",
@@ -549,7 +572,7 @@ var render = function() {
               [
                 _c("span", { staticClass: "pull-left" }, [_vm._v("Logout")]),
                 _vm._v(" "),
-                _vm._m(8)
+                _vm._m(7)
               ]
             )
           ]
@@ -577,15 +600,6 @@ var staticRenderFns = [
         _vm._v("\n                    Quick Add...\n                ")
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-      _c("i", { staticClass: "fa fa-medkit" }),
-      _vm._v(" Case (by Nationality)")
-    ])
   },
   function() {
     var _vm = this
@@ -777,7 +791,7 @@ var render = function() {
             { staticClass: "m-t-30" },
             [
               _c("inertia-link", { attrs: { href: "/app/console" } }, [
-                _c("span", { staticClass: "title" }, [_vm._v("Dashboard")])
+                _c("span", {}, [_vm._v("Dashboard")])
               ]),
               _vm._v(" "),
               _vm._m(1)
@@ -796,11 +810,7 @@ var render = function() {
                     href: _vm.$route("app.console.situation-reports.index")
                   }
                 },
-                [
-                  _c("span", { staticClass: "title" }, [
-                    _vm._v("Situation Reports")
-                  ])
-                ]
+                [_c("span", {}, [_vm._v("Situation Reports")])]
               ),
               _vm._v(" "),
               _vm._m(2)
@@ -814,11 +824,30 @@ var render = function() {
             [
               _c(
                 "inertia-link",
-                { attrs: { href: _vm.$route("app.console.cases.index") } },
-                [_c("span", { staticClass: "title" }, [_vm._v("Case Mapping")])]
+                {
+                  attrs: {
+                    href: _vm.$route("app.console.case-by-nationality.index")
+                  }
+                },
+                [_c("span", {}, [_vm._v("Case By Nationality")])]
               ),
               _vm._v(" "),
               _vm._m(3)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {},
+            [
+              _c(
+                "inertia-link",
+                { attrs: { href: _vm.$route("app.console.cases.index") } },
+                [_c("span", {}, [_vm._v("Case Mapping")])]
+              ),
+              _vm._v(" "),
+              _vm._m(4)
             ],
             1
           )
@@ -883,6 +912,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "icon-thumbnail" }, [
       _c("i", { staticClass: "fa fa-medkit" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon-thumbnail" }, [
+      _c("i", { staticClass: "fa fa-globe" })
     ])
   },
   function() {

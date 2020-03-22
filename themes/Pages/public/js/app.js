@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ef9dd3c4da3a04a955e0","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"5d6fe21930f06d4b37f5","6":"822f875cdd26c7ec915d","7":"3f84343082c6a11abb37","8":"4552684df9c9576fea19","9":"0c5ba8cf3d40210a2f1d","10":"c9093757ba2b4af9fdc9","11":"a688ce762b2d1090acd5","12":"ec7219f909329374d5c2","13":"7b8f4b6313b612ee49aa","14":"68224f0dc1c800e6766c","15":"73a119979018bac676e8"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "./js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"e0ef37a8d6cc777345e7","1":"23fd17a91328d3730e9d","2":"c8261c2f7fee1ba63aab","3":"25ddc2de7e82ec363e27","4":"8477a0c313bb3b1ada87","5":"5d6fe21930f06d4b37f5","6":"822f875cdd26c7ec915d","7":"3f84343082c6a11abb37","8":"4552684df9c9576fea19","9":"0c5ba8cf3d40210a2f1d","10":"750d1532346da0cd6b89","11":"a688ce762b2d1090acd5","12":"ec7219f909329374d5c2","13":"7b8f4b6313b612ee49aa","14":"68224f0dc1c800e6766c","15":"73a119979018bac676e8","16":"1df7b5e12df27cbc721c","17":"6993952431776acd7fd2"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13485,6 +13485,26 @@ var map = {
 		1,
 		13
 	],
+	"./caseByNationality/Create": [
+		"./resources/js/Pages/caseByNationality/Create.vue",
+		0,
+		17
+	],
+	"./caseByNationality/Create.vue": [
+		"./resources/js/Pages/caseByNationality/Create.vue",
+		0,
+		17
+	],
+	"./caseByNationality/Index": [
+		"./resources/js/Pages/caseByNationality/Index.vue",
+		0,
+		16
+	],
+	"./caseByNationality/Index.vue": [
+		"./resources/js/Pages/caseByNationality/Index.vue",
+		0,
+		16
+	],
 	"./networkData/CaseMap": [
 		"./resources/js/Pages/networkData/CaseMap.vue",
 		1,
@@ -13731,7 +13751,8 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('typeahead', {
       var dataSet = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.whitespace,
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        // prefetch: 'http://pages.revox.io/json/countries-list.json',
+        // 'http://pages.revox.io/json/countries-list.json'
+        prefetch: binding.value.apiSource,
         local: binding.value.localStore
       });
       setTimeout(function () {
